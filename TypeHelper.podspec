@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "TypeHelper"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "A simple function for getting the name of the non optional type in Swift."
   s.homepage         = "https://github.com/markvaldy/TypeHelper"
   s.license          = {
@@ -21,4 +21,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Source/**/*.{swift}'
+  s.frameworks = 'Foundation'
 end
