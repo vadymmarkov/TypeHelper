@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "TypeHelper"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "A simple function for getting the name of the non optional type in Swift."
   s.homepage         = "https://github.com/markvaldy/TypeHelper"
   s.license          = {
