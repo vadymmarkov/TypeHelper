@@ -1,19 +1,11 @@
-import Foundation
+public func nonOptionalTypeName<T>(type: T?.Type) -> String {
+    return nonOptionalTypeName(T)
+}
 
-public func nonOptionalTypeName(type: Any.Type) -> String
-{
-    let name = toString(type) as NSString
-    let regex = NSRegularExpression(pattern: "(?<=<).+?(?=>)",
-        options: nil, error: nil)!
+public func nonOptionalTypeName<T>(type: T!.Type) -> String {
+    return nonOptionalTypeName(T)
+}
 
-    let results = regex.matchesInString(name as String, options: nil, range: NSMakeRange(0, name.length))
-    let matches = map(results) {
-        name.substringWithRange($0.range)
-    }
-
-    if matches.count > 0 {
-        return matches[0] as String
-    }
-
-    return name as String
+public func nonOptionalTypeName<T>(type: T.Type) -> String {
+    return String(type)
 }
